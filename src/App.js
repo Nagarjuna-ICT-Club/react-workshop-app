@@ -10,7 +10,6 @@ function App() {
     axios.get("https://api.nytimes.com/svc/books/v3/lists/overview.json?api-key=PerGZ9dSZPiQuQJGzAiHaQLlMacXk5FU").then(res=>{
       console.log(res.data);
       setBooks(res.data.results.lists)
-
       setLoading(false);
     }).catch(err=>console.log(err))
   },[])
